@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <title>People Manager</title>
+</head>
+
+<body>
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">Add Person</a>
+    </div>
+    <div class="content">
+        <h1>Person Manager</h1>
+        <div class="grid-container">
+            <form action="/add_person" method="post">
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id" required><br>
+    
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+    
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="age" required><br>
+    
+                <button type="submit"> Add Person</button>
+            </form>
+            <h2>People List</h2>
+            <table>
+                <thead>
+                    <tr>ID</tr>
+                    <tr>Name</tr>
+                    <tr>Age</tr>
+                    <tr>Actions</tr>
+                </thead>
+                <tbody>
+                    {% for person in people %}
+                    <tr>
+                        <td>{{ person.id }}</td>
+                        <td>{{ person.name }}</td>
+                        <td>{{ person.age }}</td>
+                        <td>
+                            <form action="/update_person/{{person.id}}" method="post" class="update_form">
+                                <input type="text" name="name" id="name" value="{{person.name}}" required>
+                                <input type="text" name="age" id="age" value="{{person.age}}" required>
+                                <button type="submit">Update</button>
+                            </form>
+                            <form action="/delete_person/{{person.id}}" method="post" class="delete_form">
+                                <button type="submit"> Confirmar Exclusão</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+       
+    </div>
+
+</body>
+
+</html>
