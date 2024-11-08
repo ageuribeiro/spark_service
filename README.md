@@ -1,2 +1,2 @@
-# spark_pdv
- Desenvolvimento de Sistemas para PDV Generalista
+# spark_service
+Sistema para academias que integra varias plataformas
