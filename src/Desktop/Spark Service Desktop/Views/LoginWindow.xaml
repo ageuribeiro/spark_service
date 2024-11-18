@@ -37,7 +37,7 @@
                              Margin="0,0,0,10"
                              KeyDown="LoginCode_KeyDown"/>
 
-                <Button Content="Login"
+                <Button Content="Acessar Sistema"
                         Name="loginButton"
                         Width="200"
                         Height="30"
@@ -48,9 +48,9 @@
                         Click="LoginButton_Click"
                         KeyDown="LoginButton_KeyDown"/>
                 <TextBlock x:Name="ErrorMessage" Foreground="Red" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0"/>
-                <TextBlock Text="Em caso de ajuda, " Foreground="CadetBlue">
-                    <Hyperlink NavigateUri="https://www.microsoft.com" RequestNavigate="Hyperlink_RequestNavigate">
-                        Contate o Administrador do Sistema.
+                <TextBlock Text="Se você não tem cadastro ou precisa de ajuda, " Foreground="CadetBlue">
+                    <Hyperlink NavigateUri="RegisterUserWindow" RequestNavigate="Hyperlink_RequestNavigate">
+                        inicie por aqui.
                     </Hyperlink>
                 </TextBlock>
             </StackPanel>

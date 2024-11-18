@@ -11,8 +11,8 @@ namespace Spark_Service_Desktop.Models
         public int Id { get; set; }
         public string ? Name { get; set; }
         public string ? Location { get; set; }
-        public List<User> ? Owners { get; set; }
-        public List<User> ? Trainers { get; set; }
-        public List<User> ? Members { get; set; }
+        public List<Users> ? Owners { get; set; }
+        public List<Users> ? Trainers { get; set; }
+        public List<Users> ? Members { get; set; }
     }
 }

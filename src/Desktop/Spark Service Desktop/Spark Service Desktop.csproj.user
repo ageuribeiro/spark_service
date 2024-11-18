@@ -7,18 +7,42 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\AcademyPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AcademyWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\DashboardPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ExercisePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\MainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\RegisterUserPage.xaml.cs">
+    <Compile Update="Views\RegisterUserWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UserPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UserProfileWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\AcademyPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AcademyWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\DashboardPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ExercisePage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\LoginWindow.xaml">
@@ -27,7 +51,13 @@
     <Page Update="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\RegisterUserPage.xaml">
+    <Page Update="Views\RegisterUserWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserProfileWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

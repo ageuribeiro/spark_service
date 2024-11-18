@@ -25,4 +25,10 @@
     <Resource Include="png-transparent-fingerprint-biometrics.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

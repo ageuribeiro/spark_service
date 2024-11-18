@@ -16,12 +16,12 @@ namespace Spark_Service_Desktop.Views
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            var user = new User
+            var user = new Users
             {
                 Username = usernameBox.Text,
-                Password = passwordBox.Password,
-                Email = emailBox.Text,
-                Role = ((ComboBoxItem)roleComboBox.SelectedItem).Content.ToString(),
+                UserPass = passwordBox.Password,
+                UserEmail = emailBox.Text,
+                UserRole = ((ComboBoxItem)roleComboBox.SelectedItem).Content.ToString(),
                 DateJoined = DateTime.Now
             };
 

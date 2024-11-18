@@ -6,11 +6,11 @@ namespace Spark_Service_Desktop.Controllers
 {
     public class LoginController
     {
-        private readonly User userModel;
+        private readonly Users userModel;
 
         public LoginController()
         {
-            userModel = new User();
+            userModel = new Users();
         }
 
         public void ShowLoginView()

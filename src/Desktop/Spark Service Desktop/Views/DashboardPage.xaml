@@ -9,6 +9,6 @@
       Title="DashboardPage">
 
     <Grid>
-        
+        <TextBlock Text="Dashboard" FontSize="24" VerticalAlignment="Top" Margin="10"/>
     </Grid>
 </Page>

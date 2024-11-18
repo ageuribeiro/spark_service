@@ -1,12 +1,15 @@
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Spark Service Desktop.csproj.AssemblyReference.cache
+C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\AcademyPage.g.cs
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\DashboardPage.g.cs
+C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\ExercisePage.g.cs
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\LoginWindow.g.cs
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
-C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\RegisterUserPage.g.cs
+C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\UserPage.g.cs
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Spark Service Desktop_MarkupCompile.cache
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Spark Service Desktop_MarkupCompile.lref
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\bin\Debug\net8.0-windows\Spark Service Desktop.exe
+C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\bin\Debug\net8.0-windows\appsettings.json
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\bin\Debug\net8.0-windows\Spark Service Desktop.deps.json
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\bin\Debug\net8.0-windows\Spark Service Desktop.runtimeconfig.json
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\bin\Debug\net8.0-windows\Spark Service Desktop.dll
@@ -60,10 +63,12 @@ C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Servic
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\AcademyPage.baml
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\DashboardPage.baml
+C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\ExercisePage.baml
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\LoginWindow.baml
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\MainWindow.baml
-C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\RegisterUserPage.baml
+C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\UserPage.baml
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Spark Service Desktop.g.resources
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Spark Service Desktop.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Spark Service Desktop.AssemblyInfoInputs.cache
@@ -76,3 +81,9 @@ C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Servic
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Spark Service Desktop.pdb
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Spark Service Desktop.genruntimeconfig.cache
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\ref\Spark Service Desktop.dll
+C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\AcademyWindow.g.cs
+C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\UserProfileWindow.g.cs
+C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\AcademyWindow.baml
+C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\UserProfileWindow.baml
+C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\RegisterUserWindow.g.cs
+C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\obj\Debug\net8.0-windows\Views\RegisterUserWindow.baml

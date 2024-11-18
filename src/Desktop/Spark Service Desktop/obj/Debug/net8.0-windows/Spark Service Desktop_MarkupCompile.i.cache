@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\agl_r\OneDrive\Documentos\GitHub\spark_service\src\Desktop\Spark Service Desktop\App.xaml
-4608244242
+9330552257
 
-16-1165930052
+241741419227
 234-1824956643
-Views\DashboardPage.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\RegisterUserPage.xaml;
+Views\AcademyPage.xaml;Views\AcademyWindow.xaml;Views\DashboardPage.xaml;Views\ExercisePage.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\RegisterUserWindow.xaml;Views\UserPage.xaml;Views\UserProfileWindow.xaml;
 
-False
+True
 

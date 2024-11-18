@@ -9,9 +9,11 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
             <Button Content="Dashboard" Width="100" Height="30" Margin="5" Click="NavigateToDashboard"/>
-            <Button Content="Register User" Width="100" Height="30" Margin="5" Click="NavigateToRegisterUser"/>
+            <Button Content="Users" Width="100" Height="30" Margin="5" Click="NavigateToUser"/>
+            <Button Content="Academy" Width="100" Height="30" Margin="5" Click="NavigateToAcademy"/>
+            <Button Content="Exercises" Width="100" Height="30" Margin="5" Click="NavigateToExercises"/>
         </StackPanel>
     </Grid>
 </Window>
