@@ -19,7 +19,7 @@ LOGGING_CONFIG = {
     "disable_existing_loggers": False,
     "formatters":{
         "standard":{
-            "format": "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
+            "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
         }
     },
     "handlers":{
@@ -39,7 +39,6 @@ LOGGING_CONFIG = {
     "root":{
         "handlers": ["file_handler", "json_handler"],
         "level": "DEBUG"
-
     },
     "loggers":{
         "my_logger":{
@@ -61,7 +60,6 @@ def save_log_json(log_record):
         "level": log_record.levelname,
         "message": log_record.message
     }
-
     with open(os.path.join(LOG_DIR, JSON_LOG_FILE), 'a') as json_log:
         json_log.write(json.dumps(log_entry) + '\n')
 

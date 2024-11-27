@@ -8,9 +8,11 @@
 <body>
     <h1>Logs</h1>
     <ul>
-        {% for log in logs %}
-            <li>{{log.timestamp}} -- {{log.name}} -- {{log.message}}</li>
-        {% endfor %}
+        {% for log in logs%}
+        <li> 
+            {{ log.timestamp }} - {{ log.name }} - {{ log.message }}
+        </li>
+       {% endfor %}
     </ul>
 </body>
 </html>
