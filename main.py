@@ -1,4 +1,4 @@
-from api.v1.routes import app
+from app import app
 import os
 app = app()
 

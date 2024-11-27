@@ -2,7 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from pymongo import MongoClient
 import logging
-from ..logging_config import logger, save_log_json
+from log_config import logger, save_log_json
 
 db = SQLAlchemy()
 
