@@ -1,6 +1,6 @@
-from api import create_app
+from api.v1.routes import app
 import os
-app = create_app()
+app = app()
 
 if(__name__) == '__main__':
     port = int(os.environ.get('PORT', 5000))
