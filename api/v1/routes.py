@@ -29,7 +29,7 @@ def persons():
     if request.method == 'POST':
         try:
             data=request.get_json()
-            new_person =Person(**data)
+            new_person = Person(**data)
             db.session.add(new_person)
             db.session.commit()
             logging.info(info=str(data))
@@ -37,6 +37,25 @@ def persons():
         except Exception as e:
             logging.error(error=str(e))
             return jsonify(error=str(e)), 500
+        
+# Endpoint para listar as academias
+@app.route('/academies', methods=['GET', 'POST'])
+def academies():
+    if request.method == 'GET':
+        academies = Academy.query.all()
+        return jsonify([academy.to_dict() for academy in academies]), 200
+    if request.method == 'POST':
+        try:
+            data=request.get_json()
+            new_academy = Academy(**data)
+            db.session.add(new_academy)
+            db.session.commit()
+            logging.info(info=str(data))
+            return jsonify(new_academy.to_dict()), 201
+        except Exception as e:
+            logging.error(error=str(e))
+            return jsonify(error=str(e)), 500
+
 
 # Endpoint para listar os tickets  
 @app.route("/create_ticket", methods=["GET", "POST"])
