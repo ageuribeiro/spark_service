@@ -8,9 +8,9 @@ from log_config import logger, save_log_json
 db = SQLAlchemy()
 
 client = MongoClient("mongodb://localhost:27017/")
-db = client.get_database('spark_db')
+mongo_db = client.get_database('spark_db')
 logs_collection = db.get_collection('logs')
-mongo_db = client['logs']
+# mongo_db = client['logs']
 
 def create_app():
     app = Flask(__name__)
@@ -24,4 +24,5 @@ def create_app():
     register_controllers(app)
 
     logger.debug("Application running...")
+    
     return app
