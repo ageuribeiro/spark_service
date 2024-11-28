@@ -4,6 +4,8 @@ import logging
 
 app = app()
 
+FLASK_ENV = 'debug=False'
+
 logging.basicConfig(level=logging.INFO, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
