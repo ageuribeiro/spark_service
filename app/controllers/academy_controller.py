@@ -1,4 +1,4 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, render_template, request, jsonify
 from ..models import Academy
 from app import db
 
@@ -19,3 +19,8 @@ def handle_academies():
             return jsonify(academy.to_dict()), 201
         except Exception as e:
             return jsonify({'error': str(e)}), 500
+
+@academy_bp.route('/academies', methods=['GET'])
+def academies_page():
+    academies = Academy.query.all()
+    return render_template('academies.html', academies=academies)

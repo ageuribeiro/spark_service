@@ -23,6 +23,9 @@ def create_app():
     from .controllers import register_controllers
     register_controllers(app)
 
+    from app.views.views import main_bp
+    app.register_blueprint(main_bp)
+
     logger.debug("Application running...")
 
     return app
