@@ -10,10 +10,10 @@ db = SQLAlchemy()
 client = MongoClient("mongodb://localhost:27017/")
 mongo_db = client.get_database('spark_db')
 logs_collection = mongo_db.get_collection('logs')
-# mongo_db = client['logs']
+
 
 def create_app():
-    app = Flask(__name__)
+    app = Flask(__name__, template_folder='views/templates')
     app.config.from_object('config.Config')
     app.config["MONGO_CLIENT"] = client
     app.config["LOGS_COLLECTION"] = logs_collection
@@ -23,8 +23,8 @@ def create_app():
     from .controllers import register_controllers
     register_controllers(app)
 
-    from app.views.views import main_bp
-    app.register_blueprint(main_bp)
+    from app.views.general_views import general_bp
+    app.register_blueprint(general_bp)
 
     logger.debug("Application running...")
 
