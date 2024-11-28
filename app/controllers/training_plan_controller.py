@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from ..models import Training_plan
+from ..models import training_plan
 from app import db
 
 
@@ -8,7 +8,7 @@ training_plan_bp = Blueprint('training_plan_bp', __name__)
 @training_plan_bp.route('/training_plan', methods=['GET','POST'])
 def handle_training_plans():
     if request.method == 'GET':
-        training_plans = Training_plan.query.all()
+        training_plans = training_plan.query.all()
         return jsonify([training_plan.to_dict() for training_plan in training_plans]), 200
     
     if request.method == 'POST':
