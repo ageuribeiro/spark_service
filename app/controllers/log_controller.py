@@ -13,7 +13,7 @@ def display_logs():
     return render_template('logs.html', logs=logs)
 
 
-@log_bp.route('logs_json', methods=['POST'])
+@log_bp.route('/logs_json', methods=['POST'])
 def save_log():
     logs_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '--', 'logs','app.json')
     logs_collection = current_app.config["LOGS_COLLECTION"]
