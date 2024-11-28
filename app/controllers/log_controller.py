@@ -15,7 +15,8 @@ def display_logs():
 
 @log_bp.route('/logs_json', methods=['POST'])
 def save_log():
-    logs_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '--', 'logs','app.json')
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    logs_path = os.path.join(project_root, 'logs','app.json')
     logs_collection = current_app.config["LOGS_COLLECTION"]
 
     if os.path.exists(logs_path):
@@ -25,7 +26,7 @@ def save_log():
                     log_data = json.loads(line)
                     logs_collection.insert_one(log_data)
                 except json.JSONDecodeError as e:
-                    logging.ERROR(f'Erro ao decodificar JSON: {e}')
+                    logging.error(f'Erro ao decodificar JSON: {e}')
                     print(f"Erro ao decodificar JSON: {e}")
                     return jsonify({"message":"Erro ao processar o log", "error":str(e)}), 500
 
