@@ -7,12 +7,19 @@
 </head>
 <body>
     <h1>Logs</h1>
-    <ul>
+    <table>
+        <tr>
+            <th>Timestamp</th>
+            <th>Name</th>
+            <th>Message</th>
+        </tr>
         {% for log in logs%}
-        <li> 
-            {{ log.timestamp }} - {{ log.name }} - {{ log.message }}
-        </li>
-       {% endfor %}
-    </ul>
+        <tr>
+            <td>{{ log.timestamp }}</td>
+            <td>{{ log.name }}</td>
+            <td>{{ log.message }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
