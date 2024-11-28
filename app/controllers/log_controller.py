@@ -13,7 +13,7 @@ def display_logs():
     return render_template('logs.html', logs=logs)
 
 
-@log_bp.route('/logs_json', methods=['POST'])
+@log_bp.route('/logs_json', methods=['GET','POST'])
 def save_log():
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     logs_path = os.path.join(project_root, 'logs','app.json')

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Pessoas</title>
+</head>
+
+<body>
+    <h1>Pessoas</h1>
+    <h2>Listar Pessoas</h2>
+    <ul id="person-list">
+        <!--Pessoas serão listadas aqui via Javascript-->
+    </ul>
+    <h2>Adicionar Pessoa</h2>
+    <form id="add-person-form">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" />
+            <br>
+        </div>
+        <div>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" />
+            <br>
+        </div>
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email">
+            <br>
+        </div>
+        <!-- Adicione outros campos conforme necessário -->
+        <button type="submit">Salvar</button>
+    </form>
+    <script>
+        function listPersons() {
+            fetch('/persons/person')
+                .then(response => response.json())
+                .then(data => {
+                    const personList = document.getElementById('person-list');
+                    personList.innerHTML = ''; // Limpa a lista
+                    data.forEach(person => {
+                        const li = document.createElement('li');
+                        li.textContent = `${person.nome} (${person.idade}) - ${person.email}`; // Adapte os campos
+                        personList.appendChild(li);
+                    });
+                })
+                .catch(error => console.error('Erro ao tentar listar pessoas:', error));
+                
+        }
+
+        listPersons();
+
+        // Manipulador de evento para o formulário de adicionar pessoa
+        document.getElementById('add-person-form').addEventListener('submit', (event) => {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            const nome = document.getElementById('nome').value;
+            const idade = document.getElementById('idade').value;
+            const email = document.getElementById('email').value;
+
+
+            fetch('/persons/person', { // Rota POST para criar pessoa
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ nome, idade, email
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Pessoa criada:', data);
+                    listPersons(); 
+                    
+                    document.getElementById('add-person-form').reset();
+                })
+        
+                .catch(error => console.error('Erro ao criar pessoa:', error))
+        
+            });
+        });   
+    </script>
+</body>
+
+</html>
