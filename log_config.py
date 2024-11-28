@@ -1,7 +1,7 @@
 import logging
-import log_config
 import json
 import os
+from logging.config import dictConfig
 
 
 # Directory and files logs
@@ -49,7 +49,7 @@ LOGGING_CONFIG = {
     }
 }
 
-log_config.dictConfig(LOGGING_CONFIG)
+dictConfig(LOGGING_CONFIG)
 logger = logging.getLogger("my_logger")
 
 # Function for save logs in JSON Format
