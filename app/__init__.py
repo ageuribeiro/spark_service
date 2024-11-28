@@ -26,8 +26,6 @@ def create_app():
     from app.views.general_views import general_bp
     app.register_blueprint(general_bp)
 
-    from .controllers.user_controller import user_bp
-    app.register_blueprint(user_bp)
 
     logger.debug("Application running...")
 
