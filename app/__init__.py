@@ -9,7 +9,7 @@ db = SQLAlchemy()
 
 client = MongoClient("mongodb://localhost:27017/")
 mongo_db = client.get_database('spark_db')
-logs_collection = db.get_collection('logs')
+logs_collection = mongo_db.get_collection('logs')
 # mongo_db = client['logs']
 
 def create_app():
@@ -24,5 +24,5 @@ def create_app():
     register_controllers(app)
 
     logger.debug("Application running...")
-    
+
     return app

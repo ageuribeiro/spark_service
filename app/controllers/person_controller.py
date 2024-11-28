@@ -1,10 +1,11 @@
 from flask import Blueprint, request, jsonify
 from ..models import Person
-from .. import db
+from app import db
+
 
 person_bp = Blueprint('person_bp', __name__)
 
-@person_bp.route('/', methods=['GET','POST'])
+@person_bp.route('/person', methods=['GET','POST'])
 def handle_persons():
     if request.method == 'GET':
         persons = Person.query.all()
