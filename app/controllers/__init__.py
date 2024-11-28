@@ -1,3 +1,5 @@
+from flask import Flask, Blueprint
+
 def register_controllers(app):
     from .person_controller import person_bp
     from .academy_controller import academy_bp

@@ -3,11 +3,12 @@ from flask_sqlalchemy import SQLAlchemy
 from pymongo import MongoClient
 from config import Config
 import logging
+import os
 from log_config import logger, save_log_json
 
 db = SQLAlchemy()
 
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient(os.environ.get("MONGO_URI"))
 mongo_db = client.get_database('spark_db')
 logs_collection = mongo_db.get_collection('logs')
 
