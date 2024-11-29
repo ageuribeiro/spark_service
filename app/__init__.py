@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_wtf.csrf import CSRFProtect
 from pymongo import MongoClient
 from config import Config
 import logging
@@ -11,7 +12,6 @@ db = SQLAlchemy()
 client = MongoClient(os.environ.get("MONGO_URI"))
 mongo_db = client.get_database('spark_db')
 logs_collection = mongo_db.get_collection('logs')
-
 
 def create_app():
     app = Flask(__name__, template_folder='views/templates')
@@ -27,6 +27,8 @@ def create_app():
     from app.views.general_views import general_bp
     app.register_blueprint(general_bp)
 
+    csrf = CSRFProtect()
+    csrf.init_app(app)
 
     logger.debug("Application running...")
 

@@ -1,3 +1,4 @@
+from .utils import error_handler, PersonSchema
 from flask import Blueprint, render_template, request, jsonify
 from ..models import Person
 from app import mongo_db
@@ -5,9 +6,10 @@ from app import mongo_db
 person_bp = Blueprint('person_bp', __name__)
 
 @person_bp.route('/person', methods=['GET','POST'])
+@error_handler
 def handle_persons():
     
-    persons_collections = mongo_db.get_collection('person')
+    persons_collections = mongo_db.get_collection('persons')
 
     if request.method == 'GET':
         try:
@@ -18,10 +20,12 @@ def handle_persons():
     
     if request.method == 'POST':
         try:
-            data = request.get_json()
+            schema = PersonSchema()
+            data = schema.load(request.get_json())
             persons_collections.insert_one(data)
             
             return jsonify(data), 201
+        
         except Exception as e:
             return jsonify({'error': str(e)}), 500
 
