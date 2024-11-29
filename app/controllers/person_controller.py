@@ -12,8 +12,11 @@ def get_persons():
     persons_collections = mongo_db.get_collection('persons')
     try:
         persons = list(persons_collections.find())
+        for person in persons:
+            person['_id'] = str(person['_id'])
         return jsonify(persons), 200
     except Exception as e:
+        logging.exception(e)
         return jsonify({'error': str(e)}), 500
 
 @person_bp.route('/persons/<person_id>', methods=['GET'], endpoint='get_person')
@@ -23,10 +26,12 @@ def get_person(person_id):
     try:
         person =persons_collection.find_one({"_id": ObjectId(person_id)})
         if person:
+            person['_id'] = str(person['_id'])
             return jsonify(person), 200
         else:
             abort(404)
     except Exception as e:
+        logging.exception(e)
         return jsonify({'error': str(e)}), 500
     
 @person_bp.route('/persons', methods=['POST'], endpoint='create_person')
