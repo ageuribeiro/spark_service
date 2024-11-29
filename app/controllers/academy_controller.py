@@ -5,7 +5,7 @@ from app import mongo_db
 
 academy_bp = Blueprint('academy_bp', __name__)
 
-@academy_bp.route('/academy', methods=['GET','POST'])
+@academy_bp.route('/academy', methods=['GET','POST'], endpoint='handle_academies_api')
 @error_handler
 def handle_academies():
 
@@ -29,6 +29,6 @@ def handle_academies():
         except Exception as e:
             return jsonify({'error': str(e)}), 500
 
-@academy_bp.route('/academies', methods=['GET'])
+@academy_bp.route('/academies', methods=['GET'], endpoint='academies_page')
 def academies_page():
     return render_template('academies.html')

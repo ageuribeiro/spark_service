@@ -5,7 +5,7 @@ from app import mongo_db
 
 person_bp = Blueprint('person_bp', __name__)
 
-@person_bp.route('/person', methods=['GET','POST'])
+@person_bp.route('/person', methods=['GET','POST'], endpoint='handle_persons_api')
 @error_handler
 def handle_persons():
     
@@ -29,6 +29,6 @@ def handle_persons():
         except Exception as e:
             return jsonify({'error': str(e)}), 500
 
-@person_bp.route('/persons', methods=['GET','POST'])
+@person_bp.route('/persons', methods=['GET','POST'], endpoint='persons_page')
 def persons_page():
     return render_template('persons.html')

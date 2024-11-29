@@ -5,7 +5,7 @@ from app import mongo_db
 
 access_log_bp = Blueprint('access_log_bp', __name__)
 
-@access_log_bp.route('/logs_acesso', methods=['GET','POST'])
+@access_log_bp.route('/logs_acesso', methods=['GET','POST'], endpoint='handle_access_log')
 @error_handler
 def handle_access_logs():
 
